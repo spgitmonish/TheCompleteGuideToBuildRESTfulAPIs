@@ -1,6 +1,6 @@
-const express = require('express');
 const genres = require('./routes/genres.js');
 const home = require('./routes/home.js');
+const express = require('express');
 const app = express();
 
 // Middleware
