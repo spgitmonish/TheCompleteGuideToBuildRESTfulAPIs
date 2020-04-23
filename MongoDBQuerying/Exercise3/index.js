@@ -22,7 +22,7 @@ async function getCourses() {
   const queryResult = await Course
     .find({ isPublished: true })
     .or([ { price: { $gte : 15 } }, 
-          { name: { $regex: /.*by.*/ } } ])
+          { name: { $regex: /.*by.*/i } } ])
     .select({ name: 1, author: 1, price: 1});
 
   return queryResult;
