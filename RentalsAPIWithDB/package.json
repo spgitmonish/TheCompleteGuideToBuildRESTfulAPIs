@@ -1,5 +1,5 @@
 {
-  "name": "MoviesAPIWithDB",
+  "name": "RentalsAPIWithDB",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,6 @@
     "joi": "^14.3.1",
     "mongoose": "^5.9.10"
   },
+  "devDependencies": {},
   "description": ""
 }
