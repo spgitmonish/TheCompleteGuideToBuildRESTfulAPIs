@@ -1,3 +1,4 @@
+require('express-async-errors');
 const config = require('config');
 const home = require('./routes/home');
 const genres = require('./routes/genres');
@@ -6,6 +7,7 @@ const movies = require('./routes/movies');
 const rentals = require('./routes/rentals');
 const users = require('./routes/users');
 const auth = require('./routes/auth');
+const error = require('./middleware/error');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -34,6 +36,8 @@ app.use('/api/movies', movies);
 app.use('/api/rentals', rentals);
 app.use('/api/users', users); 
 app.use('/api/auth', auth);
+// This middleware needs to be after all the other middleware
+app.use(error);
 
 // Use the environment variable or the 3000 for the port
 const port = process.env.PORT || 3000;
