@@ -1,4 +1,6 @@
 require('express-async-errors');
+require('winston-mongodb');
+const winston = require('winston');
 const config = require('config');
 const home = require('./routes/home');
 const genres = require('./routes/genres');
@@ -11,6 +13,19 @@ const error = require('./middleware/error');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+
+winston.add(winston.transports.File, { filename: 'errors.log' });
+winston.add(winston.transports.MongoDB, { db: 'mongodb://localhost/vidly' });
+
+// Uncaught exception handling and exit the process
+winston.handleExceptions(
+  new winston.transports.File({ filename: 'exceptions.log' })
+);
+
+// Unhandled promise rejection and exit the process
+process.on('unhandledRejection', (ex) => {
+  throw ex;
+});
 
 // Check if the configuration setting is defined 
 if(!config.get('jwtSecretPrivateKey')) {
