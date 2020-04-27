@@ -5,9 +5,7 @@ const authenticate = require('../middleware/authenticate');
 const admin = require('../middleware/admin');
 
 // CRUD
-router.get('/', async (req, res) => {
-  throw new Error('Error getting genres');
-  
+router.get('/', async (req, res) => {  
   // Send back all the genres read from the database
   const genres = await Genre.find().sort('name');
   res.send(genres);
