@@ -1,2 +1,2 @@
 # TheCompleteGuideToBuildRESTfulAPIs
-Building RESTful APIs in Node.js, completed app is hosted on heroku: https://thawing-harbor-70039.herokuapp.com/
+[Building RESTful APIs in Node.js](https://www.udemy.com/course/nodejs-master-class/)
