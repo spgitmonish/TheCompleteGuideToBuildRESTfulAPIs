@@ -18,7 +18,8 @@
     "mongoose": "^5.9.10",
     "winston": "^2.4.0",
     "winston-mongodb": "^3.0.0",
-    "mem": ">=4.0.0"
+    "mem": ">=4.0.0",
+    "braces": ">2.3.1"
   },
   "jest": {
     "verbose": true,
