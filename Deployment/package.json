@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "compression": "^1.7.2",
     "config": "^3.3.1",
     "express": "^4.17.1",
