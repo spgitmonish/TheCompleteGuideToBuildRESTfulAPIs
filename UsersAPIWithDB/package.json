@@ -19,7 +19,7 @@
     "lodash": "^4.17.19",
     "mongoose": "^5.9.10",
     "winston": "^2.4.0",
-    "winston-mongodb": "^3.0.0"
+    "winston-mongodb": "^5.1.0"
   },
   "devDependencies": {},
   "description": ""
